@@ -7,7 +7,7 @@ import spock.lang.Unroll
 
 class WikipediaSearchSpec extends GebSpec {
 	
-	def "Wikipedia Search"() {
+	def "1 - Wikipedia Search"() {
 		
 		given:'A user navigates to the Wikipedia Search Page'
 			to WikipediaHomePage

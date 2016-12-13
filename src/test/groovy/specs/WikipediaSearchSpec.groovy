@@ -7,16 +7,17 @@ import spock.lang.Unroll
 
 class WikipediaSearchSpec extends GebSpec {
 	
-	def "Search by Customer Reference Number"() {
+	def "Wikipedia Search"() {
 		
-		given:'A user navigates to the Search Page'
+		given:'A user navigates to the Wikipedia Search Page'
 			to WikipediaHomePage
 		
-		when:'The user enters a Customer Reference Number'
+		when:'The user enters some text into the search box and clicks search'
 			searchInput = 'Capgemini'
 			searchButton.click()
 		
-		then:'Only transactions for that customers are returned'
+		then:'The user is navigated to an information page with a title matching the search text'
 			at WikipediaResultsPage
+			firstHeading == 'Capgemini'
 	}
 }

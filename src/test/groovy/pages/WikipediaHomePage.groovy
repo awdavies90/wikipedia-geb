@@ -9,7 +9,7 @@ class WikipediaHomePage extends Page {
 	static at = { browser.driver.currentUrl == url }
 
 	static content = {
-		searchInput { $(id:'searchInput') }
+		searchInput { $('#searchInput') }
 		searchButton { $('.pure-button') }
 	}
 }

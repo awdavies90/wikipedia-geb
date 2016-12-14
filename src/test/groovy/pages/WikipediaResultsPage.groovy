@@ -9,6 +9,8 @@ class WikipediaResultsPage extends Page {
 	static at = { browser.driver.currentUrl.contains(url) }
 
 	static content = {
-		firstHeading { $(id:'firstHeading').text() }
+		firstHeading { $('#firstHeading').text() }
+		searchInput { $('#searchInput') }
+		searchButton { $('#searchButton') }
 	}
 }
